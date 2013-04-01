@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <title>YouTube Plus Minus</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <script src="http://www.google.com/jsapi" type="text/javascript"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">google.load("swfobject", "2.1");</script>    
+    <script type="text/javascript" src="code.js"></script>
+  </head>
+  <body>
+    <table width = "100%">
+    <tr>
+    <td valign="top" width="600px">
+      <div id="videoDiv"></div>
+      <div id="info">
+      </div>
+      <span id="repeatButton">
+        Repeat <input type="checkbox" name="repeat" onclick="toggleRepeat();"/>
+      </span>
+      <span id="shuffleButton">
+        Shuffle <input type="checkbox" name="shuffle" onclick="toggleShuffle();"/>
+      </span>
+      <div id="playlist"><table id="playlistTable"></table></div>
+    </td>
+    <td align="left" valign="top">
+        <form name="search" style="display:inline">
+        <table><td width="120px">
+          <input type="text" name="searchBox" cols=10 style="resize: none;" 
+            onkeydown="return delaySearch(event);"
+          />
+        </td>
+        <td  width="24px">
+        <img src="search.png" title="Search" onclick="regularSearch()"/>
+        </td>
+        <td>
+          Instant <input type="checkbox" name="instant" onclick="toggleInstant();"/>
+        </td>
+        </table>
+        </form>
+      <br>
+      <span id="videoInfo">
+        <span id="results" width="100%"> </span>
+      </span>
+    </td>
+    </tr>
+    </table>
+  </body>
+</html>

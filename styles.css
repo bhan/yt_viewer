@@ -1,0 +1,21 @@
+html {
+  height:100%;
+}
+body {
+  height:100%;margin:0px;padding:0px;font-family:"calibri";
+}
+table{
+  height:100%;width:100%;
+}
+#playlist{
+  overflow:auto;position:absolute;height:20%;width:600px;
+}
+#result:hover{
+  background-color:#ADD8E6;
+}
+#videoDiv{
+  margin-right:3px;
+}
+#videoInfo{
+  overflow:auto;position:absolute;height:90%;
+}
